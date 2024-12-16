@@ -1,13 +1,24 @@
 #!/usr/bin/env python3
-""" module contenant the element_lenght function"""
-
-
-from typing import List, Union, Tuple
-
-
-def element_length(lst: List[Union[int, str]]) -> List[Tuple[Union[int, str], int]]:
-"""return a list of tuples containing the element and its length
-Args: lst: List[Union[int, str]]: list of integers and strings
-Returns: List[Tuple[Union[int, str], int]]: list of tuples containing the element and its length
 """
-		return [(i, len(i)) for i in lst]
+Module containing the element_length function.
+"""
+
+
+from typing import Iterable, Sequence, List, Tuple
+
+
+def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence, int]]:
+    """
+    Returns a list of tuples,
+    where each tuple contains an element from the input
+    iterable and the length of that element.
+
+    Args:
+        lst (Iterable[Sequence]):
+        An iterable containing sequences (e.g., lists, strings).
+
+    Returns:
+        List[Tuple[Sequence, int]]:
+        A list of tuples with each sequence and its length.
+    """
+    return [(i, len(i)) for i in lst]
