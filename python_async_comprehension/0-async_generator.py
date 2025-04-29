@@ -5,10 +5,10 @@ Module for asynchronous random number generation
 
 import asyncio
 import random
-from typing import AsyncGenerator
+from typing import Generator
 
 
-async def async_generator() -> AsyncGenerator[float]:
+async def async_generator() -> Generator[float, None]:
     """
     Coroutine that generates random numbers asynchronously.
 
