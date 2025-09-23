@@ -66,10 +66,10 @@ class Server:
         current_index = index
         collected = 0
 
-        # Keep looking for items until we have page_size items
-        # or run out of data
-        max_idx = max(indexed_data.keys()) + 1
-        while collected < page_size and current_index < max_idx:
+        # Keep looking for items until we have page_size items or run
+        # out of data
+        while (collected < page_size and
+               current_index < max(indexed_data.keys()) + 1):
             # Check if this index exists (hasn't been deleted)
             if current_index in indexed_data:
                 data.append(indexed_data[current_index])
