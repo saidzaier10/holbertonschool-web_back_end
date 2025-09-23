@@ -1,0 +1,2 @@
+// liost all documents with Holberton school as the name
+db.school.find({ name: "Holberton school" })
